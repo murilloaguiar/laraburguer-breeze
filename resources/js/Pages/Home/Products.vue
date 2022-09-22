@@ -36,16 +36,13 @@
 </template>
 
 <script>
-import HomeLayoutVue from '@/Layouts/HomeLayout.vue';
+import HomeLayout from '@/Layouts/HomeLayout.vue';
 
 export default {
-    components:{
-        HomeLayoutVue
-    },
     props:{
         products: Object
     },
-    layout: HomeLayoutVue
+    layout: HomeLayout
     
 }
 </script>
