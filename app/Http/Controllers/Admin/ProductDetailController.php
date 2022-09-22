@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\UserHasAddress;
-use App\Http\Requests\StoreUserHasAddressRequest;
-use App\Http\Requests\UpdateUserHasAddressRequest;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreProductDetailRequest;
+use App\Http\Requests\UpdateProductDetailRequest;
+use App\Models\ProductDetail;
 
-class UserHasAddressController extends Controller
+class ProductDetailController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +32,10 @@ class UserHasAddressController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreUserHasAddressRequest  $request
+     * @param  \App\Http\Requests\StoreProductDetailRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreUserHasAddressRequest $request)
+    public function store(StoreProductDetailRequest $request)
     {
         //
     }
@@ -42,10 +43,10 @@ class UserHasAddressController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\UserHasAddress  $userHasAddress
+     * @param  \App\Models\ProductDetail  $productDetail
      * @return \Illuminate\Http\Response
      */
-    public function show(UserHasAddress $userHasAddress)
+    public function show(ProductDetail $productDetail)
     {
         //
     }
@@ -53,10 +54,10 @@ class UserHasAddressController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\UserHasAddress  $userHasAddress
+     * @param  \App\Models\ProductDetail  $productDetail
      * @return \Illuminate\Http\Response
      */
-    public function edit(UserHasAddress $userHasAddress)
+    public function edit(ProductDetail $productDetail)
     {
         //
     }
@@ -64,11 +65,11 @@ class UserHasAddressController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateUserHasAddressRequest  $request
-     * @param  \App\Models\UserHasAddress  $userHasAddress
+     * @param  \App\Http\Requests\UpdateProductDetailRequest  $request
+     * @param  \App\Models\ProductDetail  $productDetail
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateUserHasAddressRequest $request, UserHasAddress $userHasAddress)
+    public function update(UpdateProductDetailRequest $request, ProductDetail $productDetail)
     {
         //
     }
@@ -76,10 +77,10 @@ class UserHasAddressController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\UserHasAddress  $userHasAddress
+     * @param  \App\Models\ProductDetail  $productDetail
      * @return \Illuminate\Http\Response
      */
-    public function destroy(UserHasAddress $userHasAddress)
+    public function destroy(ProductDetail $productDetail)
     {
         //
     }
