@@ -8,7 +8,7 @@
                     <!-- Mobile menu button-->
                     <button
                         type="button"
-                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-blue-400  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                         aria-controls="mobile-menu"
                         aria-expanded="false"
                     >
@@ -72,39 +72,42 @@
                     </div>
                     <div class="hidden sm:block sm:ml-6">
                         <div class="flex space-x-4">
-                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                            <!-- Current: "bg-gray-900 text-blue-400", Default: "text-gray-300  hover:text-blue-400" -->
                             <Link
-                                href="#"
-                                class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                                aria-current="page"
+                                :href="route('index')"
+                                class="text-gray-300  hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium"
+                                :class="{ 'active': $page.component === 'Home/Index' }"
                             >
                                 Início
                             </Link>
 
                             <Link
                                 :href="route('catalog')"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                class="text-gray-300  hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium"
+                                :class="{'active': $page.component === 'Home/Products' }"
                             >
                                 Catálogo
                             </Link>
 
                             <Link
                                 :href="route('orders')"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                class="text-gray-300  hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium"
+                                :class="{'active': $page.component === 'Home/Orders' }"
                             >
                                 Meus pedidos
                             </Link>
 
                             <Link
                                 :href="route('bag')"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                class="text-gray-300  hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium"
+                                :class="{'active': $page.component === 'Home/Bag' }"
                             >
                                 Carrinho
                             </Link>
 
                             <Link
                                 :href="route('login')"
-                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                class="text-gray-300  hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium"
                                 v-if="!$page.props.auth.user"
                             >
                                 Login
@@ -117,7 +120,7 @@
                 >
                     <button
                         type="button"
-                        class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                        class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                     >
                         <span class="sr-only">View notifications</span>
                         <!-- Heroicon name: outline/bell -->
@@ -143,31 +146,31 @@
         <!-- Mobile menu, show/hide based on menu state. -->
         <div class="sm:hidden" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <!-- Current: "bg-gray-900 text-blue-400", Default: "text-gray-300  hover:text-blue-400" -->
                 <Link
                     href="#"
-                    class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+                    class="bg-gray-900 text-blue-400 block px-3 py-2 rounded-md text-base font-medium"
                     aria-current="page"
                 >
                     Início
                 </Link>
                 <Link
                     href="#"
-                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    class="text-gray-300  hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium"
                 >
                     Catálogo
                 </Link>
 
                 <Link
                     href="#"
-                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    class="text-gray-300  hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium"
                 >
                     Meus pedidos
                 </Link>
 
                 <Link
                     href="#"
-                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    class="text-gray-300  hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium"
                 >
                     Carrinho
                 </Link>

@@ -25,7 +25,7 @@ use Inertia\Inertia;
 //     ]);
 // });
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/catalog', [HomeController::class, 'catalog'])->name('catalog');
 Route::get('/orders', [HomeController::class, 'orders'])->name('orders');
 Route::get('/bag', [HomeController::class, 'bag'])->name('bag');
