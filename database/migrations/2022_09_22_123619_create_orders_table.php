@@ -15,7 +15,11 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->string('status', 30)->default('Em aberto');
+            $table->float('total',5,2)->nullable();
             $table->timestamps();
+
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
