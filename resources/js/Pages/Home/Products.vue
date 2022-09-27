@@ -1,8 +1,6 @@
 <template>
     <div class="container mx-auto">
-        <h1>Catalogo</h1>
-
-        <div class="grid grid-cols-4 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
             <div
                 v-for="product in products.data" :key="product.id"
                 class="w-full max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700"
